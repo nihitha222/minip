@@ -1,6 +1,8 @@
 FROM nginx:alpine
 
-COPY minip.html /usr/share/nginx/html/index.html
+COPY . /usr/share/nginx/html/
+
+RUN mv /usr/share/nginx/html/minip.html /usr/share/nginx/html/index.html
 
 EXPOSE 80
 
