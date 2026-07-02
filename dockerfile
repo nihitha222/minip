@@ -1,3 +1,7 @@
 FROM nginx:alpine
-COPY minip.html /usr/share/nginx/html/minip.html
+
+COPY minip.html /usr/share/nginx/html/index.html
+
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
